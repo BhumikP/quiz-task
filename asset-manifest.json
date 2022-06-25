@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/quiz-task/static/css/main.30544b5f.css",
-    "main.js": "/quiz-task/static/js/main.c11d2647.js",
-    "static/js/787.b4f5e102.chunk.js": "/quiz-task/static/js/787.b4f5e102.chunk.js",
-    "index.html": "/quiz-task/index.html",
-    "main.30544b5f.css.map": "/quiz-task/static/css/main.30544b5f.css.map",
-    "main.c11d2647.js.map": "/quiz-task/static/js/main.c11d2647.js.map",
-    "787.b4f5e102.chunk.js.map": "/quiz-task/static/js/787.b4f5e102.chunk.js.map"
+    "main.css": "/quiz-task.git/static/css/main.30544b5f.css",
+    "main.js": "/quiz-task.git/static/js/main.b6373d2c.js",
+    "static/js/787.b4f5e102.chunk.js": "/quiz-task.git/static/js/787.b4f5e102.chunk.js",
+    "index.html": "/quiz-task.git/index.html",
+    "main.30544b5f.css.map": "/quiz-task.git/static/css/main.30544b5f.css.map",
+    "main.b6373d2c.js.map": "/quiz-task.git/static/js/main.b6373d2c.js.map",
+    "787.b4f5e102.chunk.js.map": "/quiz-task.git/static/js/787.b4f5e102.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30544b5f.css",
-    "static/js/main.c11d2647.js"
+    "static/js/main.b6373d2c.js"
   ]
 }
