@@ -37,23 +37,20 @@ function Quiz({ setStartQuiz, startQuiz, totalQuestions }) {
     setInputValue(e.target.value);
   };
 
-  const timer = () => {
-    setTimeout(() => {
-      if (seconds === 0) {
-        handleNext();
-        setSeconds(20);
-      } else {
-        setSeconds(seconds - 1);
-      }
-    }, 1000);
-  };
+  let timer;
 
   useEffect(() => {
     if (!finish) {
-      timer();
+      timer = setInterval(() => {
+        if (seconds === 0) {
+          handleNext();
+        } else {
+          setSeconds(seconds - 1);
+        }
+      }, 1000);
     }
 
-    return () => clearTimeout(timer);
+    return () => clearInterval(timer);
   }, [seconds, finish]);
 
   const handleNext = () => {
@@ -63,7 +60,7 @@ function Quiz({ setStartQuiz, startQuiz, totalQuestions }) {
     if (step === totalQuestions) {
       setFinish(true);
     } else {
-      clearTimeout(timer);
+      setSeconds(20);
       setStep((prev) => prev + 1);
       setInputValue("");
       generateRandomQuestion();

@@ -18,7 +18,7 @@ function QuizComponent() {
             Start Quiz
           </Button>
           <div>
-            <label for="points">
+            <label htmlFor="points">
               Choose Number of questions (between 1 and 10):
             </label>
           </div>
@@ -34,9 +34,9 @@ function QuizComponent() {
               max="10"
             />
           </div>
-          <h3>{noOfQuestions}</h3>
-          <ul style={{ margin: "auto" }}>
-            <li>You will be given 3 questions one by one.</li>
+          {/* <h3>{noOfQuestions}</h3> */}
+          <ul style={{ margin: "auto", marginTop: "20px" }}>
+            <li>You will be given {noOfQuestions} questions one by one.</li>
             <li>Each question contains 1 point.</li>
             <li>
               20 seconds timer will run once you start the quiz,If you are
@@ -50,7 +50,7 @@ function QuizComponent() {
         <Quiz
           setStartQuiz={setStartQuiz}
           startQuiz={startQuiz}
-          totalQuestions={noOfQuestions}
+          totalQuestions={Number(noOfQuestions)}
         />
       )}
     </div>
