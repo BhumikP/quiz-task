@@ -1,9 +1,14 @@
 import { Button, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { userWithScore } from "../../feature/userScore";
 
 function Quiz({ setStartQuiz, startQuiz, totalQuestions }) {
   let navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { name } = useSelector((state) => state.user);
 
   const [step, setStep] = useState(1);
   const [seconds, setSeconds] = useState(20);
@@ -58,6 +63,7 @@ function Quiz({ setStartQuiz, startQuiz, totalQuestions }) {
       setScore(score + 1);
     }
     if (step === totalQuestions) {
+      dispatch(userWithScore(score));
       setFinish(true);
     } else {
       setSeconds(20);
@@ -83,7 +89,7 @@ function Quiz({ setStartQuiz, startQuiz, totalQuestions }) {
       {finish ? (
         <div>
           {" "}
-          <h2>Congrats ! You have finished the quiz !!</h2>
+          <h2>Congrats {name} ! You have finished the quiz !!</h2>
           <h1>Your score is {score}</h1>
           <Button
             variant="contained"
